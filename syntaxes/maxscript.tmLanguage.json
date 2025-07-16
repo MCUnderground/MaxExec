@@ -23,6 +23,17 @@
       "match": "\\b(public|private|protected)\\b"
     },
     {
+      "name": "string.quoted.verbatim.maxscript",
+      "begin": "@\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.maxscript",
+          "match": "\"\""
+        }
+      ]
+    },
+    {
       "name": "string.quoted.double.maxscript",
       "begin": "\"",
       "end": "\"",
@@ -47,9 +58,18 @@
       "match": "\\b(0x[0-9a-fA-F]+|\\d+(\\.\\d+)?([eE][-+]?\\d+)?)\\b"
     },
     {
-      "name": "support.function.builtin.maxscript",
-      "match": "\\b(abs|acos|asin|atan|ceil|cos|exp|floor|log|max|min|pow|sin|sqrt|tan|mod)\\b"
+      "name": "support.class.builtin.maxscript",
+      "match": "\\b(?:AmbientLight|AmbientSpot|Array|BezierFloat|BezierPoint|Bitmap|Bitmaptexture|BitArray|Boolean|Box|BipedFoot|BipedLeg|BipedRoot|BipedSpine|BipedTorso|BipedUpperArm|BipedUpperLeg|BipedWrapper|Bone|Box|Camera|CatmullClark|Circle|Clipboard|Color|ColorCorrection|ColorLookup|ColorSampler|Composite|Control|Controller|CurlNoise|Cylinder|DisplayModifier|DotNet|EditableMesh|EditablePoly|EulerAngles|ExposureControl|ExposureValue|Float|FloatList|FloatScriptController|FloatScriptMod|FocalLength|Fog|Force|ForceController|ForceField|ForceFieldShape|ForcePS|ForceScale|ForceSpin|ForceSpinController|ForceSpinMod|ForceVector|ForceVectorController|ForceVectorMod|ForceWind|ForceWindController|ForceWindMod|Geosphere|Gradient|GradientRamp|GraphicMaterial|Grid|Group|Haze|HexColor|HitTest|HotSpot|IKChain|IKConstraint|IKControl|IKSolver|IKSolver2|IKSolver3|IKSolverBasic|IKSpline|IKSolverFK|IKSolverIK|IKSplineSolver|IKSolverWorld|IKSolverWorldFK|IKSolverWorldIK|Light|LightObject|Line|List|Mesh|Modifier|Morpher|MorphTarget|MultiMaterial|MultiSubObjectMaterial|Noise|Node|Normal|NurbsCurve|NurbsSurface|Null|Object|ParamBlock|ParticleSystem|PeltMap|Physique|Plugin|Point3|PolyMesh|PolyShape|Projection|Quaternion|Ray|RayIntersection|Renderer|RenderElement|Rollout|RolloutFloater|RotationController|ScaleController|Scene|Script|Shape|ShapeInstance|Skin|SkinMorph|SkinPose|SkinWeight|Smoke|Spline|Sphere|SpotLight|Sunlight|SurfaceShader|Texture|Time|TimeValue|TransformController|TriMesh|Triangle|UI|Undo|UserProp|Vector|Vertex|Wave|Wavelet|Weld|WeldModifier|WeldTarget|Wireframe|World|WorldSpace|ZBuffer)\\b"
     },
+    {
+      "name": "support.function.builtin.maxscript",
+      "match": "\\b(?:abs|acos|addmodifier|align|asin|atan|attach|bind|bakeanimation|calc|cancel|cast|centerpivot|clear|copy|cos|convertto|createDir|cubicinterp|delete|detach|diffuse|dotnet|getNodeByName|getobjectbyname|getvertex|getFace|load|lookup|max|min|mod|move|pow|print|random|remove|rotate|save|scale|sin|sqrt|tan|transform|translate|unwrap|update|xor)\\b"
+    },
+    {
+      "name": "support.variable.builtin.maxscript",
+      "match": "\\b(?:BatchPostScript|false|maxFilePath|on|off|true|undefined)\\b"
+    },
+
     {
       "name": "variable.parameter.maxscript",
       "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=:)\\b"

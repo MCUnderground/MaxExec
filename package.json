@@ -2,7 +2,9 @@
   "name": "maxexec",
   "displayName": "MaxExec",
   "description": "Run MaxScript code directly from VS Code with ease. Adds support for sytax highlighting.",
-  "version": "1.0.0",
+  "version": "1.0.4",
+  "publisher": "MCUnderground",
+  "icon": "images/icon.png",
   "author": "MCUnderground",
   "engines": {
     "vscode": "^1.102.0"
@@ -13,6 +15,12 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "snippets": [
+      {
+        "language": "maxscript",
+        "path": "./snippets/maxscript.code-snippets"
+      }
+    ],
     "languages": [
       {
         "id": "maxscript",
@@ -41,7 +49,23 @@
         "command": "maxexec.sendSelection",
         "title": "Send Selection to 3ds Max"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "maxexec.sendFullFile",
+        "key": "ctrl+shift+e",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "maxexec.sendSelection",
+        "key": "ctrl+shift+s",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "maxexec.selectInstance",
+        "key": "ctrl+alt+e"
+      }
+  ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

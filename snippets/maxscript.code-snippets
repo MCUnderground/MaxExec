@@ -1,0 +1,91 @@
+{
+  "If Statement": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) then",
+      "(${2:-- code})"
+    ],
+    "description": "Insert an if statement"
+  },
+  "If-Else Statement": {
+    "prefix": "ifelse",
+    "body": [
+      "if (${1:condition}) then",
+      "(${2:-- code})",
+      "else",
+      "(${3:-- else code})"
+    ],
+    "description": "Insert an if-else statement"
+  },
+  "If-Do Statement": {
+    "prefix": "ifdo",
+    "body": [
+      "if (${1:condition}) do (${2:-- code})"
+    ],
+    "description": "Insert an if-do statement"
+  },
+  "Case Statement": {
+    "prefix": "case",
+    "body": [
+      "case (${1:expression}) of (",
+      "  ${2:value1}: (${3:-- code})",
+      "  ${4:value2}: (${5:-- code})",
+      "  default: (${6:-- default code})",
+      ")"
+    ],
+    "description": "Insert a switch statement"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) do (",
+      "  ${2:-- code}",
+      ")"
+    ],
+    "description": "Insert a while loop"
+  },
+  "For Loop (numeric)": {
+    "prefix": "for",
+    "body": [
+      "for ${1:i} = ${2:1} to ${3:10} do (",
+      "  ${4:-- code}",
+      ")"
+    ],
+    "description": "Insert a numeric for loop"
+  },
+  "For Loop (each)": {
+    "prefix": "foreach",
+    "body": [
+      "for ${1:item} in ${2:collection} do (",
+      "  ${3:-- code}",
+      ")"
+    ],
+    "description": "Insert a foreach loop"
+  },
+  "Function Declaration": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:FunctionName} (${2:args}) =",
+      "(${3:-- code})"
+    ],
+    "description": "Define a MaxScript function"
+  },
+  "Struct Declaration": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:StructName} (",
+      "  ${2:-- properties or methods}",
+      ")"
+    ],
+    "description": "Define a MaxScript struct"
+  },
+  "Rollout Declaration": {
+    "prefix": "rollout",
+    "body": [
+      "rollout ${1:RolloutName} \"${2:Title}\" (",
+      "  ${3:-- UI elements here}",
+      ")"
+    ],
+    "description": "Define a MaxScript rollout"
+  }
+}
