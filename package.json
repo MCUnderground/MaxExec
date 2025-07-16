@@ -1,0 +1,66 @@
+{
+  "name": "maxexec",
+  "displayName": "MaxExec",
+  "description": "Run MaxScript code directly from VS Code with ease. Adds support for sytax highlighting.",
+  "version": "1.0.0",
+  "author": "MCUnderground",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "maxscript",
+        "aliases": ["MaxScript", "maxscript"],
+        "extensions": [".ms", ".mcr"],
+        "configuration": "./syntaxes/maxscript-language.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "maxscript",
+        "scopeName": "source.maxscript",
+        "path": "./syntaxes/maxscript.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "maxexec.selectInstance",
+        "title": "Select 3ds Max Instance"
+      },
+      {
+        "command": "maxexec.sendFullFile",
+        "title": "Send Full File to 3ds Max"
+      },
+      {
+        "command": "maxexec.sendSelection",
+        "title": "Send Selection to 3ds Max"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "build": "tsc",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "scopeName": "source.maxscript",
+  "name": "MaxScript",
+  "patterns": [
+    {
+      "name": "keyword.control.flow.maxscript",
+      "match": "\\b(if|then|else|for|while|do|exit|return|try|catch|throw|continue|break)\\b"
+    },
+    {
+      "name": "keyword.declaration.maxscript",
+      "match": "\\b(fn|function|struct|global|local|on|parameters|rollout|plugin)\\b"
+    },
+    {
+      "name": "constant.language.boolean.maxscript",
+      "match": "\\b(true|false|on|off)\\b"
+    },
+    {
+      "name": "constant.language.undefined.maxscript",
+      "match": "\\bundefined\\b"
+    },
+    {
+      "name": "storage.modifier.maxscript",
+      "match": "\\b(public|private|protected)\\b"
+    },
+    {
+      "name": "string.quoted.double.maxscript",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.maxscript",
+          "match": "\\\\[\"\\\\nrt]"
+        }
+      ]
+    },
+    {
+      "name": "comment.line.double-slash.maxscript",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.maxscript",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "constant.numeric.maxscript",
+      "match": "\\b(0x[0-9a-fA-F]+|\\d+(\\.\\d+)?([eE][-+]?\\d+)?)\\b"
+    },
+    {
+      "name": "support.function.builtin.maxscript",
+      "match": "\\b(abs|acos|asin|atan|ceil|cos|exp|floor|log|max|min|pow|sin|sqrt|tan|mod)\\b"
+    },
+    {
+      "name": "variable.parameter.maxscript",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=:)\\b"
+    },
+    {
+      "name": "variable.function.maxscript",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=\\()"
+    },
+    {
+      "name": "variable.other.object.maxscript",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "keyword.operator.maxscript",
+      "match": "\\+|-|\\*|/|%|==|!=|<=|>=|<|>|=|\\+=|-=|\\*=|/=|&&|\\|\\||!"
+    },
+    {
+      "name": "punctuation.terminator.statement.maxscript",
+      "match": ";"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["ms", "mcr"]
+}

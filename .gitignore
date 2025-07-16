@@ -1,0 +1,93 @@
+# ----------------------------------------
+# Node.js / TypeScript / VS Code Extension
+# ----------------------------------------
+node_modules/
+dist/
+out/
+*.vsix
+*.log
+*.tsbuildinfo
+
+# VSCode Extension Test Artifacts
+.vscode-test/
+
+# NPM Cache
+.npm/
+
+# ----------------------------------------
+# Visual Studio Code (workspace settings)
+# ----------------------------------------
+.vscode/
+.vscode-test/
+
+# VS Code local history, backups, etc.
+.history/
+.ionide/
+
+# ----------------------------------------
+# JetBrains Rider / IntelliJ / WebStorm
+# ----------------------------------------
+.idea/
+*.iml
+*.iws
+out/
+
+# Rider-specific
+.idea_modules/
+
+# JetBrains project files
+*.sln.iml
+
+# ----------------------------------------
+# Visual Studio
+# ----------------------------------------
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# Build results
+*.exe
+*.dll
+*.obj
+*.pdb
+*.cache
+*.ilk
+*.log
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.sql
+*.psess
+*.vsp
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.tlog
+*.log
+*.vsix
+
+# VS output folders
+[Bb]in/
+[Oo]bj/
+TestResults/
+Debug/
+Release/
+x64/
+x86/
+
+# VS Temporary files
+*.tmp
+*.vs/
+
+# ----------------------------------------
+# OS / Misc
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.lock
+.env
