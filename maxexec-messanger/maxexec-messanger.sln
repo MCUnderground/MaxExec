@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maxexec-messanger", "maxexec-messanger.csproj", "{ED274159-5080-40A3-958E-785AEAE36860}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "maxexec-messanger-cpp", "maxexec-messanger-cpp\maxexec-messanger-cpp.vcxproj", "{1F6B50FF-A205-42EA-94DE-2F60130E7227}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{ED274159-5080-40A3-958E-785AEAE36860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED274159-5080-40A3-958E-785AEAE36860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED274159-5080-40A3-958E-785AEAE36860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6B50FF-A205-42EA-94DE-2F60130E7227}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{1F6B50FF-A205-42EA-94DE-2F60130E7227}.Debug|Any CPU.Build.0 = Debug|Win32
+		{1F6B50FF-A205-42EA-94DE-2F60130E7227}.Release|Any CPU.ActiveCfg = Release|Win32
+		{1F6B50FF-A205-42EA-94DE-2F60130E7227}.Release|Any CPU.Build.0 = Release|Win32
 	EndGlobalSection
 EndGlobal

@@ -2,6 +2,14 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.0.7] - 2025-07-17
+### Fixed
+- Implemented c++ api to futher decrease size and improve speeds.
+
+## [1.0.6] - 2025-07-17
+### Fixed
+- Decreased size of package big chunk.
+
 ## [1.0.5] - 2025-07-17
 ### Fixed
 - Improved documentation and metadata and size.

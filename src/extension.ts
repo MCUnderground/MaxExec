@@ -7,7 +7,7 @@ import { execFile } from 'child_process';
 let selectedMaxHandle: string | null = null;
 
 export function activate(context: vscode.ExtensionContext) {
-    const exePath = context.asAbsolutePath('data/maxexec-messanger.exe');
+    const exePath = context.asAbsolutePath('data/maxexec-messanger-cpp.exe');
 
         async function getAvailableInstances(): Promise<{ label: string, handle: string }[]> {
         return new Promise((resolve, reject) => {

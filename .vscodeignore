@@ -1,4 +1,6 @@
 maxexec-messanger/**
+maxexec-messanger-cpp/**
+data/maxexec-messanger.exe
 .vscode/**
 .vscode-test/**
 src/**
@@ -10,3 +12,6 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+**/node_modules/**
+!node_modules/vscode/**     
+!node_modules/@types/**   
