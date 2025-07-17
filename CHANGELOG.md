@@ -2,6 +2,10 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.0.8] - 2025-07-17
+### Fixed
+- IDisabled c++ since its buggy still
+
 ## [1.0.7] - 2025-07-17
 ### Fixed
 - Implemented c++ api to futher decrease size and improve speeds.

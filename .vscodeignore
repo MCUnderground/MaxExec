@@ -1,6 +1,6 @@
 maxexec-messanger/**
 maxexec-messanger-cpp/**
-data/maxexec-messanger.exe
+data/maxexec-messanger-cpp.exe
 .vscode/**
 .vscode-test/**
 src/**
