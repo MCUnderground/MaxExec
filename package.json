@@ -2,13 +2,21 @@
   "name": "maxexec",
   "displayName": "MaxExec",
   "description": "Run MaxScript code directly from VS Code with ease. Adds support for sytax highlighting.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "MCUnderground",
   "icon": "images/icon.png",
   "author": "MCUnderground",
   "engines": {
-    "vscode": "^1.102.0"
+    "vscode": "^1.60.0"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/MCUnderground/maxexec"
+  },
+  "bugs": {
+  "url": "https://github.com/MCUnderground/maxexec/issues"
+  },
+  "homepage": "https://github.com/MCUnderground/maxexec#readme",
   "categories": [
     "Other"
   ],
@@ -68,23 +76,14 @@
   ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "build": "tsc",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "watch": "tsc -w"
   },
   "devDependencies": {
-    "@types/vscode": "^1.102.0",
-    "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "^8.31.1",
-    "@typescript-eslint/parser": "^8.31.1",
-    "eslint": "^9.25.1",
-    "typescript": "^5.8.3",
-    "@vscode/test-cli": "^0.0.11",
-    "@vscode/test-electron": "^2.5.2"
+    "@types/vscode": "^1.60.0",
+    "typescript": "^5.8.3"
   }
+
 }
