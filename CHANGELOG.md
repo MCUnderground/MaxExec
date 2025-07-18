@@ -2,9 +2,21 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.1.1] - 2025-07-18
+### Fixed
+- Syntax doesnt care about char case anymore.
+
+## [1.1.0] - 2025-07-18
+### Fixed
+- Improved syntax highlighting
+
+## [1.0.9] - 2025-07-18
+### Fixed
+- Fixed mistake of comment definition, its fixed to be "--" now instead of "//"
+
 ## [1.0.8] - 2025-07-17
 ### Fixed
-- IDisabled c++ since its buggy still
+- Disabled c++ since its buggy still
 
 ## [1.0.7] - 2025-07-17
 ### Fixed

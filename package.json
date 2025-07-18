@@ -2,7 +2,7 @@
   "name": "maxexec",
   "displayName": "MaxExec",
   "description": "Run MaxScript code directly from VS Code with ease. Adds support for sytax highlighting.",
-  "version": "1.0.8",
+  "version": "1.1.1",
   "publisher": "MCUnderground",
   "icon": "images/icon.png",
   "author": "MCUnderground",

@@ -1,0 +1,25 @@
+{
+  "name": "MaxScript Dark+",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "constant.other.symbol.maxscript",
+      "settings": {
+        "foreground": "#FF5370"
+      }
+    },
+    {
+      "scope": "keyword.declaration.ui.maxscript",
+      "settings": {
+        "foreground": "#82AAFF"
+      }
+    },
+    {
+      "scope": "variable.parameter.maxscript",
+      "settings": {
+        "foreground": "#C792EA"
+      }
+    }
+  ]
+}
