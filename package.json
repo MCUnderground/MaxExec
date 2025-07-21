@@ -2,7 +2,7 @@
   "name": "maxexec",
   "displayName": "MaxExec",
   "description": "Run MaxScript code directly from VS Code with ease. Adds support for sytax highlighting.",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "publisher": "MCUnderground",
   "icon": "images/icon.png",
   "author": "MCUnderground",
@@ -33,8 +33,12 @@
       {
         "id": "maxscript",
         "aliases": ["MaxScript", "maxscript"],
-        "extensions": [".ms", ".mcr"],
-        "configuration": "./syntaxes/maxscript-language.json"
+        "extensions": [".ms", ".mcr", ".mse", ".mzp"],
+        "configuration": "./syntaxes/maxscript-language.json",
+        "icon": {
+          "light": "./images/ms-file.svg",
+          "dark": "./images/ms-file.svg"
+        }
       }
     ],
     "grammars": [

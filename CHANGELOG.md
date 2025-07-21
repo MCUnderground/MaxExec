@@ -2,6 +2,14 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.1.3] - 2025-07-21
+### Added
+- Fixed iconing
+
+## [1.1.2] - 2025-07-21
+### Added
+- Added icons for all known MaxScript file types.
+
 ## [1.1.1] - 2025-07-18
 ### Fixed
 - Syntax doesnt care about char case anymore.

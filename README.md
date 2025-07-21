@@ -18,6 +18,8 @@
 - 💡 **Snippets**  
   Includes useful MaxScript snippets for common structures like if-statements, loops, and function declarations.
 
+- 💡 **ICONS**  
+  Includes icons for all known 3ds MaxScript related file types.
 ---
 
 ## 🛠 Commands

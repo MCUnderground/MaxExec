@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <style>
+    .file-bg { fill: #1E1E1E; }
+    .corner { fill: #2D2D2D; }
+    .label {
+      fill: #0696D7;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      font-size: 48px;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+  </style>
+
+  <path class="file-bg" d="M16 8h64l32 32v80a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V16a8 8 0 0 1 8-8z"/>
+  <path class="corner" d="M80 8v32h32z"/>
+  <text class="label" x="64" y="76">MS</text>
+</svg>
