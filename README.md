@@ -1,6 +1,7 @@
 # MaxExec
 
-**MaxExec** is a Visual Studio Code extension that allows you to execute MaxScript code directly inside Autodesk 3ds Max from within VS Code. With built-in syntax highlighting, convenient commands, and integrated communication with running 3ds Max instances, MaxExec boosts your productivity when writing MaxScript.
+**MaxExec** for VS Code
+Write and execute MaxScript code directly from Visual Studio Code. This extension provides syntax highlighting, contextual snippets for MaxScript constructs like fn, rollout, struct, if, for, and more, plus basic autocomplete powered by a growing library of built-in functions and object APIs.
 
 ---
 
@@ -18,7 +19,7 @@
 - 💡 **Snippets**  
   Includes useful MaxScript snippets for common structures like if-statements, loops, and function declarations.
 
-- 💡 **ICONS**  
+- 💡 **Icons**  
   Includes icons for all known 3ds MaxScript related file types.
 ---
 

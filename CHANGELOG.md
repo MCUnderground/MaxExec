@@ -2,6 +2,14 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.1.5] - 2025-07-23
+### Improved
+- Improved TextME grammar for more language support even more, and maybe hacky autocomplete using snippets for most of languages api..
+
+## [1.1.4] - 2025-07-23
+### Improved
+- Improved TextME grammar for more language support.
+
 ## [1.1.3] - 2025-07-21
 ### Added
 - Fixed iconing

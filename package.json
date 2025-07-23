@@ -1,8 +1,8 @@
 {
   "name": "maxexec",
   "displayName": "MaxExec",
-  "description": "Run MaxScript code directly from VS Code with ease. Adds support for sytax highlighting.",
-  "version": "1.1.3",
+  "description": "Seamlessly write and run MaxScript code in VS Code. Includes syntax highlighting, code snippets for common structures (fn, rollout, struct, loops, etc.), and lightweight autocomplete via curated snippets.",
+  "version": "1.1.5",
   "publisher": "MCUnderground",
   "icon": "images/icon.png",
   "author": "MCUnderground",
