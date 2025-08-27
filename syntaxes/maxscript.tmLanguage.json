@@ -4,7 +4,7 @@
   "patterns": [
     {
       "name": "keyword.control.flow.maxscript",
-      "match": "(?i)\\b(if|then|else|for|while|exit|return|try|catch|throw|continue|break|undo|modify|with|in)\\b"
+      "match": "(?i)\\b(if|then|in|do|where|and|not|or|else|for|while|exit|return|try|catch|throw|continue|break|undo|modify|with|case|of|collect)\\b"
     },
     {
       "name": "variable.language.maxscript",
