@@ -2,6 +2,10 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.1.7] - 2025-11-06
+### Improved
+- Extension is now activated only inside MaxScript files.
+
 ## [1.1.6] - 2025-08-27
 ### Improved
 - Added "in, do, where, and, not, or, case, of and collect" as control keywords, to have better coloring.

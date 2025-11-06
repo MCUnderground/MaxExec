@@ -2,7 +2,7 @@
   "name": "maxexec",
   "displayName": "MaxExec",
   "description": "Seamlessly write and run MaxScript code in VS Code. Includes syntax highlighting, code snippets for common structures (fn, rollout, struct, loops, etc.), and lightweight autocomplete via curated snippets.",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "publisher": "MCUnderground",
   "icon": "images/icon.png",
   "author": "MCUnderground",
@@ -66,18 +66,19 @@
       {
         "command": "maxexec.sendFullFile",
         "key": "ctrl+shift+e",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && editorLangId == maxscript"
       },
       {
         "command": "maxexec.sendSelection",
         "key": "ctrl+shift+s",
-        "when": "editorTextFocus"
+        "when": "editorTextFocus && editorLangId == maxscript"
       },
       {
         "command": "maxexec.selectInstance",
-        "key": "ctrl+alt+e"
+        "key": "ctrl+alt+e",
+        "when": "editorTextFocus && editorLangId == maxscript"
       }
-  ]
+    ]
   },
   "scripts": {
     "compile": "tsc -p ./",
