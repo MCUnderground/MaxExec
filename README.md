@@ -1,39 +1,39 @@
 # MaxExec
 
-**MaxExec** for VS Code
-Write and execute MaxScript code directly from Visual Studio Code. This extension provides syntax highlighting, contextual snippets for MaxScript constructs like fn, rollout, struct, if, for, and more, plus basic autocomplete powered by a growing library of built-in functions and object APIs.
+**MaxExec** – MaxScript Development in VS Code  
+Write and run MaxScript code directly from Visual Studio Code. This extension adds syntax highlighting, handy snippets, and the ability to send scripts straight to a running 3ds Max instance.  
+
+[Get it on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=MCUnderground.maxexec)
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔍 **3ds Max Instance Detection**  
-  Automatically detects running 3ds Max instances for script execution.
+- **3ds Max Instance Detection**  
+  Automatically finds running 3ds Max instances so you can send scripts without manual setup.
 
-- 🚀 **Send Scripts to Max**  
-  Send full files or selected code directly to your chosen 3ds Max instance.
+- **Send Scripts to Max**  
+  Send entire files or selected code directly to your chosen 3ds Max session.
 
-- 🧠 **Syntax Highlighting**  
-  Provides syntax highlighting and snippets for `.ms` and `.mcr` MaxScript files.
+- **Syntax Highlighting & Snippets**  
+  Supports `.ms` and `.mcr` files, with useful snippets for functions, rollouts, structs, loops, and conditionals.
 
-- 💡 **Snippets**  
-  Includes useful MaxScript snippets for common structures like if-statements, loops, and function declarations.
+- **File Icons**  
+  Adds icons for MaxScript-related file types for easier file browsing.
 
-- 💡 **Icons**  
-  Includes icons for all known 3ds MaxScript related file types.
 ---
 
-## 🛠 Commands
+## Commands
 
 | Command | Description |
 |--------|-------------|
-| `MaxExec: Select 3ds Max Instance` | Choose a running instance of 3ds Max |
+| `MaxExec: Select 3ds Max Instance` | Choose which running 3ds Max instance to target |
 | `MaxExec: Send Full File to 3ds Max` | Sends the entire current file |
-| `MaxExec: Send Selection to 3ds Max` | Sends the selected text or current line |
+| `MaxExec: Send Selection to 3ds Max` | Sends only the selected code or current line |
 
-### 🔑 Keybindings
+### Keybindings
 
-| Keybinding | Action |
+| Shortcut | Action |
 |-----------|--------|
 | `Ctrl+Shift+E` | Send full file |
 | `Ctrl+Shift+S` | Send selection or current line |
@@ -41,48 +41,48 @@ Write and execute MaxScript code directly from Visual Studio Code. This extensio
 
 ---
 
-## 📦 Snippet Examples
+## Snippets
 
-Examples of available snippets:
+Quickly insert common MaxScript structures:
 
-- `if`, `ifelse`, `ifdo`
-- `while`, `for`, `foreach`
-- `fn`, `struct`, `rollout`
-- `case`
+- Conditionals: `if`, `ifelse`, `ifdo`  
+- Loops: `while`, `for`, `foreach`  
+- Definitions: `fn`, `struct`, `rollout`  
+- Switches: `case`  
 
-These are available via the **MaxScript** language mode.
-
----
-
-## ⚙ Requirements
-
-- 🛠 Autodesk 3ds Max must be running.
-- 🟦 Requires the included `maxexec-messanger.exe` tool to be able to communicate with 3ds Max.
+Activate these snippets in files set to **MaxScript** mode.
 
 ---
 
-## 🔧 Installation
+## Requirements
 
-1. Clone or download this extension.
-2. Run `npm install` and `npm run build` to compile.
-3. Launch with VS Code Extension Development Host.
-4. Open a `.ms` or `.mcr` file and start scripting.
+- Autodesk 3ds Max must be running.  
+- The included `maxexec-messanger.exe` tool is required to communicate with Max.
 
 ---
 
-## 🧪 Troubleshooting
+## Installation
 
-- ❌ **No 3ds Max instances found**: Ensure 3ds Max is running and not blocked by firewall or permissions.
-- ⚠ **Script didn't execute**: The selected Max instance may have closed—reselect it via `MaxExec: Select Instance`.
+1. Clone or download this extension.  
+2. Run `npm install` and `npm run build`.  
+3. Launch VS Code in Extension Development Host mode.  
+4. Open a `.ms` or `.mcr` file and start coding.
 
 ---
 
-## 📄 License
+## Troubleshooting
+
+- **No 3ds Max instances found**: Make sure Max is running and not blocked by firewall or permissions.  
+- **Script didn't execute**: The selected Max instance may have closed—reselect it using `MaxExec: Select 3ds Max Instance`.
+
+---
+
+## License
 
 MIT
 
 ---
 
-## 📷 Icon
+## Icon
 
 ![MaxExec Icon](images/icon.png)
