@@ -6,7 +6,120 @@ import { execFile } from 'child_process';
 
 let selectedMaxHandle: string | null = null;
 
+type SnippetDefinition = {
+    prefix?: string | string[];
+    description?: string;
+};
+
+function buildSnippetDescriptionIndex(context: vscode.ExtensionContext): Map<string, string> {
+    const snippetPath = context.asAbsolutePath('snippets/maxscript.code-snippets');
+    const index = new Map<string, string>();
+
+    try {
+        const raw = fs.readFileSync(snippetPath, 'utf8');
+        const parsed = JSON.parse(raw) as Record<string, SnippetDefinition>;
+
+        for (const snippet of Object.values(parsed)) {
+            if (!snippet.prefix || !snippet.description) {
+                continue;
+            }
+
+            const prefixes = Array.isArray(snippet.prefix) ? snippet.prefix : [snippet.prefix];
+            for (const prefix of prefixes) {
+                index.set(prefix.toLowerCase(), snippet.description);
+            }
+        }
+    } catch {
+        return index;
+    }
+
+    return index;
+}
+
+function validateMaxScriptDocument(document: vscode.TextDocument, collection: vscode.DiagnosticCollection) {
+    if (document.languageId !== 'maxscript') {
+        return;
+    }
+
+    const diagnostics: vscode.Diagnostic[] = [];
+    const regionStartRegex = /^\s*--\s*#?region\b/i;
+    const regionEndRegex = /^\s*--\s*#?endregion\b/i;
+    const regionStack: number[] = [];
+
+    for (let lineIndex = 0; lineIndex < document.lineCount; lineIndex++) {
+        const line = document.lineAt(lineIndex).text;
+
+        if (regionStartRegex.test(line)) {
+            regionStack.push(lineIndex);
+            continue;
+        }
+
+        if (!regionEndRegex.test(line)) {
+            continue;
+        }
+
+        if (regionStack.length === 0) {
+            const range = new vscode.Range(lineIndex, 0, lineIndex, line.length);
+            diagnostics.push(new vscode.Diagnostic(
+                range,
+                'Unmatched endregion marker.',
+                vscode.DiagnosticSeverity.Warning
+            ));
+            continue;
+        }
+
+        regionStack.pop();
+    }
+
+    for (const startLine of regionStack) {
+        const line = document.lineAt(startLine).text;
+        const range = new vscode.Range(startLine, 0, startLine, line.length);
+        diagnostics.push(new vscode.Diagnostic(
+            range,
+            'Region marker is missing a matching endregion.',
+            vscode.DiagnosticSeverity.Warning
+        ));
+    }
+
+    collection.set(document.uri, diagnostics);
+}
+
 export function activate(context: vscode.ExtensionContext) {
+    const snippetDescriptionIndex = buildSnippetDescriptionIndex(context);
+    const diagnosticsCollection = vscode.languages.createDiagnosticCollection('maxscript');
+    context.subscriptions.push(diagnosticsCollection);
+
+    context.subscriptions.push(vscode.languages.registerHoverProvider('maxscript', {
+        provideHover(document: vscode.TextDocument, position: vscode.Position) {
+            const range = document.getWordRangeAtPosition(position, /[A-Za-z_][A-Za-z0-9_.]*/);
+            if (!range) {
+                return undefined;
+            }
+
+            const symbol = document.getText(range);
+            const description = snippetDescriptionIndex.get(symbol.toLowerCase());
+            if (!description) {
+                return undefined;
+            }
+
+            const markdown = new vscode.MarkdownString();
+            markdown.appendCodeblock(symbol, 'maxscript');
+            markdown.appendMarkdown(`\n${description}`);
+            return new vscode.Hover(markdown, range);
+        }
+    }));
+
+    const runDiagnostics = (document: vscode.TextDocument) => {
+        validateMaxScriptDocument(document, diagnosticsCollection);
+    };
+
+    context.subscriptions.push(vscode.workspace.onDidOpenTextDocument(runDiagnostics));
+    context.subscriptions.push(vscode.workspace.onDidChangeTextDocument((event: vscode.TextDocumentChangeEvent) => runDiagnostics(event.document)));
+    context.subscriptions.push(vscode.workspace.onDidCloseTextDocument((document: vscode.TextDocument) => diagnosticsCollection.delete(document.uri)));
+
+    for (const document of vscode.workspace.textDocuments) {
+        runDiagnostics(document);
+    }
     
     const exePath = context.asAbsolutePath('data/maxexec-messanger.exe');
 

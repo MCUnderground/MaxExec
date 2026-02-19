@@ -2,7 +2,7 @@
   "name": "maxexec",
   "displayName": "MaxExec",
   "description": "Seamlessly write and run MaxScript code in VS Code. Includes syntax highlighting, code snippets for common structures (fn, rollout, struct, loops, etc.), and lightweight autocomplete via curated snippets.",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "publisher": "MCUnderground",
   "icon": "images/icon.png",
   "author": "MCUnderground",
@@ -10,17 +10,22 @@
     "vscode": "^1.60.0"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/MCUnderground/maxexec"
+    "type": "git",
+    "url": "https://github.com/MCUnderground/maxexec"
   },
   "bugs": {
-  "url": "https://github.com/MCUnderground/maxexec/issues"
+    "url": "https://github.com/MCUnderground/maxexec/issues"
   },
   "homepage": "https://github.com/MCUnderground/maxexec#readme",
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:maxscript",
+    "onCommand:maxexec.selectInstance",
+    "onCommand:maxexec.sendFullFile",
+    "onCommand:maxexec.sendSelection"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "snippets": [
@@ -32,8 +37,16 @@
     "languages": [
       {
         "id": "maxscript",
-        "aliases": ["MaxScript", "maxscript"],
-        "extensions": [".ms", ".mcr", ".mse", ".mzp"],
+        "aliases": [
+          "MaxScript",
+          "maxscript"
+        ],
+        "extensions": [
+          ".ms",
+          ".mcr",
+          ".mse",
+          ".mzp"
+        ],
         "configuration": "./syntaxes/maxscript-language.json",
         "icon": {
           "light": "./images/ms-file.svg",
@@ -86,9 +99,8 @@
     "watch": "tsc -w"
   },
   "devDependencies": {
-    "@types/node": "20.x",
+    "@types/node": "^20.19.33",
     "@types/vscode": "^1.60.0",
     "typescript": "^5.8.3"
   }
-
 }

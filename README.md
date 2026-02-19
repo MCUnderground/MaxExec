@@ -18,6 +18,15 @@ Write and run MaxScript code directly from Visual Studio Code. This extension ad
 - **Syntax Highlighting & Snippets**  
   Supports `.ms` and `.mcr` files, with useful snippets for functions, rollouts, structs, loops, and conditionals.
 
+- **Code Folding Markers**  
+  Supports region-based folding with MaxScript comments using `-- region` / `-- endregion` (also supports `-- #region` / `-- #endregion`).
+
+- **Hover Docs from Snippets**  
+  Shows quick hover info for known MaxScript symbols based on the curated snippet descriptions.
+
+- **Region Diagnostics**  
+  Warns when `region` / `endregion` markers are unmatched.
+
 - **File Icons**  
   Adds icons for MaxScript-related file types for easier file browsing.
 
@@ -51,6 +60,29 @@ Quickly insert common MaxScript structures:
 - Switches: `case`  
 
 Activate these snippets in files set to **MaxScript** mode.
+
+---
+
+## Folding Regions
+
+You can create manual foldable regions using comment markers:
+
+```maxscript
+-- region Utilities
+fn myHelper value =
+(
+  value * 2
+)
+-- endregion
+```
+
+Also supported:
+
+```maxscript
+-- #region UI
+rollout r "Demo" ()
+-- #endregion
+```
 
 ---
 
