@@ -4,7 +4,6 @@
 node_modules/
 dist/
 out/
-*.vsix
 *.log
 *.tsbuildinfo
 
@@ -48,7 +47,6 @@ out/
 *.vcxproj.user
 
 # Build results
-*.exe
 *.dll
 *.obj
 *.pdb
@@ -68,7 +66,6 @@ out/
 *.cachefile
 *.tlog
 *.log
-*.vsix
 
 # VS output folders
 [Bb]in/
