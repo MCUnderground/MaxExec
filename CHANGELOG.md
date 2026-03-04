@@ -2,6 +2,14 @@
 
 All notable changes to the **MaxExec** extension will be documented in this file.
 
+## [1.2.2] - 2026-03-04
+### Fixed
+- BUG Fixed missing core executable
+
+## [1.2.0] - 2026-02-19
+### Added
+- Implement region-based folding markers and hover documentation plus diagnostics for unmatched region/endregion markers.
+
 ## [1.1.7] - 2025-11-06
 ### Improved
 - Extension is now activated only inside MaxScript files.
